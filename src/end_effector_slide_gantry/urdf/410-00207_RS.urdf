@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="410-00207_RS">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0015012 0.018116 -0.028712"
+        rpy="0 0 0" />
+      <mass
+        value="0.43274" />
+      <inertia
+        ixx="0.0011133"
+        ixy="0.00010395"
+        ixz="-3.7392E-05"
+        iyy="0.00082759"
+        iyz="0.00024239"
+        izz="0.00059614" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_slide_gantry/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_slide_gantry/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0089428 0.096845 0.0033173"
+        rpy="0 0 0" />
+      <mass
+        value="0.39498" />
+      <inertia
+        ixx="0.00037392"
+        ixy="8.2292E-06"
+        ixz="-1.7511E-05"
+        iyy="0.00010627"
+        iyz="6.9982E-06"
+        izz="0.00038766" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_slide_gantry/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_slide_gantry/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="prismatic">
+    <origin
+      xyz="0.003 0.028279 0.02625"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

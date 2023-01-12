@@ -1,0 +1,8 @@
+prefix=/home/rushi/catkin_ws/devel
+
+Name: slide_gantry
+Description: Description of slide_gantry
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

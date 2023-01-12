@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="slide_gantry">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.58897 0.40838 -0.035364"
+        rpy="0 0 0" />
+      <mass
+        value="6.3024" />
+      <inertia
+        ixx="0.26226"
+        ixy="-0.0024162"
+        ixz="2.2498E-06"
+        iyy="0.3577"
+        iyz="0.00062832"
+        izz="0.61868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rail_link">
+    <inertial>
+      <origin
+        xyz="-1.2858 0.43231 -0.053667"
+        rpy="0 0 0" />
+      <mass
+        value="2.0201" />
+      <inertia
+        ixx="0.044128"
+        ixy="-0.001392"
+        ixz="-0.00013608"
+        iyy="0.0027609"
+        iyz="0.00027036"
+        izz="0.043191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/rail_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/rail_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sliding_joint0"
+    type="prismatic">
+    <origin
+      xyz="0.41481 -0.10909 -0.00020139"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rail_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="carriage">
+    <inertial>
+      <origin
+        xyz="0.0033797 0.027663 -0.017953"
+        rpy="0 0 0" />
+      <mass
+        value="0.83806" />
+      <inertia
+        ixx="0.0015035"
+        ixy="8.6441E-05"
+        ixz="-3.0396E-05"
+        iyy="0.0012039"
+        iyz="0.00025062"
+        izz="0.00070275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/carriage.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slide_gantry/meshes/carriage.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sliding_joint1"
+    type="prismatic">
+    <origin
+      xyz="-1.2414 0.56089 -0.010833"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="rail_link" />
+    <child
+      link="carriage" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

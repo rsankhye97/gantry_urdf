@@ -1,0 +1,2 @@
+end_effector_slide_gantry:slide_gantry:urdf_tutorial
+-DCATKIN_DEVEL_PREFIX=/home/rushi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rushi/catkin_ws/install -G Unix Makefiles
